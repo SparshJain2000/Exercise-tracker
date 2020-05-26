@@ -12,7 +12,7 @@ const Exercise = (props) => {
             <td>
                 <Link to={`/edit/${props.exercise._id}`}>Edit</Link> |{" "}
                 <a
-                    href='#'
+                    href='/'
                     onClick={() => props.deleteExercise(props.exercise._id)}>
                     delete
                 </a>
@@ -59,7 +59,7 @@ class ExercisesList extends Component {
     render() {
         return (
             <div>
-                <h3>Logged Exercise</h3>
+                <h3 className='m-3'>Logged Exercise</h3>
                 <table className='table'>
                     <thead className='thead-light'>
                         <tr>

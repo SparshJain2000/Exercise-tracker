@@ -66,9 +66,9 @@ class CreateExercise extends Component {
     }
     render() {
         return (
-            <div className='m-5'>
+            <div className='m-5 p-3 rounded' id='form'>
                 <h3>Create New Exercise log</h3>
-                <Form onSubmit={this.onSubmit}>
+                <Form onSubmit={this.onSubmit} className='m-3 p-3 '>
                     <div className='form-group'>
                         <Label>Username : </Label>
                         <select

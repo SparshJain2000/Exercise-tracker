@@ -30,7 +30,7 @@ class CreateUser extends Component {
     }
     render() {
         return (
-            <div className='m-5'>
+            <div className='m-5 p-5' id='form'>
                 <h3>Create New User</h3>
                 <Form onSubmit={this.onSubmit}>
                     <div className='form-group'>

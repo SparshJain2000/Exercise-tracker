@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Label, Form } from "reactstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -79,7 +78,7 @@ class EditExercise extends Component {
     }
     render() {
         return (
-            <div className='m-5'>
+            <div className='m-5 p-3' id='form'>
                 <h3>Edit Exercise </h3>
                 <Form onSubmit={this.onSubmit}>
                     <div className='form-group'>
@@ -120,7 +119,7 @@ class EditExercise extends Component {
                         />
                     </div>
                     <div className='form-group'>
-                        <Label>Date (in minutes) : </Label>
+                        <Label>Date : </Label>
                         <div>
                             <DatePicker
                                 selected={this.state.date}
