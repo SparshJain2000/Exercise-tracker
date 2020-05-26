@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Label, Form } from "reactstrap";
+import axios from "axios";
 class CreateUser extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +24,9 @@ class CreateUser extends Component {
         this.setState({
             username: "",
         });
+        axios
+            .post("http://localhost:8080/users/add", user)
+            .then((res) => console.log(res.data));
     }
     render() {
         return (
