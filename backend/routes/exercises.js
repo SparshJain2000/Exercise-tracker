@@ -6,9 +6,8 @@ router.get("/", (req, res) => {
         .catch((err) => res.status(400).json("error: " + err));
 });
 router.post("/add", (req, res) => {
-    const username = req.body.username,
-        description = req.body.description,
-        duration = Number(req.body.duration),
+    const {username,description} = req.body;
+    const duration = Number(req.body.duration),
         date = Date.parse(req.body.date),
         newExercise = new Exercise({ username, description, duration, date });
     newExercise
